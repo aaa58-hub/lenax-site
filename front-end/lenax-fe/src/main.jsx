@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from './App.jsx'
 
 createRoot(document.getElementById("root")).render(
-    <BrowserRouter basename={import.meta.env.PUBLIC_URL || '/'}>
+    <BrowserRouter basename="/lenax-site/">
         <App />
     </BrowserRouter>
 );
