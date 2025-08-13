@@ -8,7 +8,7 @@ const rootPath = path.resolve();
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/<lenax-site>/', // Replace <repo-name> with your GitHub repo name
+  base: '/lenax-site/', // Replace <repo-name> with your GitHub repo name
   buildEnd() {
     const src = path.join(rootPath, 'dist', 'index.html');
     const dest = path.join(rootPath, 'dist', '404.html');
