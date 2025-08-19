@@ -12,8 +12,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          persist-credentials: 'false'
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -34,6 +32,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.PATH_GH_PAGES }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: front-end/lenax-fe/dist
-          publish_branch: gh-pages-fix
+          publish_branch: gh-pages
