@@ -28,6 +28,9 @@ jobs:
         run: npm run build
         working-directory: front-end/lenax-fe
 
+      - name: Debug git
+        run: git ls-remote https://aaa58-hub:${{ secrets.PATH_GH_PAGES }}@github.com/aaa58-hub/lenax-site.git
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
