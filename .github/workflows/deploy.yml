@@ -20,14 +20,14 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: frontend/app-fe
+        working-directory: front-end/lenax-fe/
 
       - name: Build
         run: npm run build
-        working-directory: frontend/app-fe
+        working-directory: front-end/lenax-fe/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: frontend/app-fe/dist
+          publish_dir: front-end/lenax-fe/dist
